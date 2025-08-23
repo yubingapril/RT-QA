@@ -1,0 +1,7 @@
+{
+    "pooling_type": "mean",
+    "heads": 6,
+    "hidden_dim": 32,
+    "dropout": 0.4,
+    "init_lr":0.001
+}
