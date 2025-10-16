@@ -10,7 +10,6 @@ from torch_geometric import data as DATA
 import torch
 import re 
 from collections import Counter
-from .md import calculate_triangle_properties
 
 
 
@@ -63,13 +62,6 @@ def count_atom_num(row):
     atom_uniq1,atom_uniq2= uniq_list[0], uniq_list[1]
     return atom_com,atom_uniq1,atom_uniq2
     
-def get_prop(row,atom_df):
-    point_1 = atom_df.loc[atom_df['atom'] == row['atom_com'], ['co_1', 'co_2', 'co_3']].iloc[0].values
-    point_2 = atom_df.loc[atom_df['atom'] == row['atom_uniq1'], ['co_1', 'co_2', 'co_3']].iloc[0].values
-    point_3 = atom_df.loc[atom_df['atom'] == row['atom_uniq2'], ['co_1', 'co_2', 'co_3']].iloc[0].values
-    pps = calculate_triangle_properties(point_1, point_2, point_3)
-    return pps
-
 
 def energy_res_contact(model_name,slice_dir,interface_dir,energy_df_2order):
     atom_file=os.path.join(interface_dir,model_name+'.txt')
