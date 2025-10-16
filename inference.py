@@ -106,7 +106,7 @@ batch_cal_area_order1(model_list,interface_dir,slice_dir,contact_dir,n_jobs)
 
 
 
-## generate Voronoi graph representation of different orders
+## generate Delaunay graph representation of different orders
  
 # Load precomputed potential-related files 
 potential_dir = os.path.join(current_folder,'potential_file')
