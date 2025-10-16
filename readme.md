@@ -1,8 +1,8 @@
 # Rhomboid tiling-based topological deep learning (RT-TDL) for quality assessment of protein complex structures
 
 This repository provides the code implementation for the paper:
-**Rhomboid tiling-based topological deep learning for quality assessment of protein complex structures**.
-The code allows evaluating protein complex structures using higher order Voronoi diagram-based representaion and rhomboid tiling-based message passing.
+**Rhomboid tiling-based topological deep learning (RT-TDL) for quality assessment of protein complex structures**.
+The code allows evaluating protein complex structures using higher order Delaunay graph representaion and rhomboid tiling-based message passing.
 
 ## Installation
 Clone the repository and install dependencies.
@@ -15,9 +15,9 @@ pip install -r requirements.txt
 ```
 If you are using conda:
 ```bash
-conda create -n rtqa python=3.9
-conda activate rtqa 
-pip install -r requirements.txt
+conda env create -f environment.yml
+conda activate rttdl 
+pip install torch-scatter -f https://data.pyg.org/whl/torch-2.1.0+cu121.html
 ```
 ### Rhomboid tiling environment 
 * Python 3.5
