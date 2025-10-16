@@ -1,0 +1,22 @@
+name: rttdl
+channels:
+  - pytorch
+  - pyg
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9.7
+  - pip
+  - pip:
+      - biopython==1.84
+      - joblib==1.4.2
+      - numpy==1.23.5
+      - pandas==2.3.2
+      - pytorch_lightning==2.4.0
+      - scikit_learn==1.5.2
+      - scipy==1.13.1
+      - Shapely==2.0.6
+      - torch==2.1.0
+      - torch_geometric==2.6.1
+      - torchmetrics==1.4.3
+
