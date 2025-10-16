@@ -1,4 +1,4 @@
-# Rhomboid tiling-based topological deep learning for quality assessment of protein complex structures
+# Rhomboid tiling-based topological deep learning (RT-TDL) for quality assessment of protein complex structures
 
 This repository provides the code implementation for the paper:
 **Rhomboid tiling-based topological deep learning for quality assessment of protein complex structures**.
@@ -10,7 +10,7 @@ This project requires **two separate environments**:
 
 ### Python environment (for prediction scripts)
 ```bash
-cd RT-QA
+cd RT-TDL
 pip install -r requirements.txt
 ```
 If you are using conda:
