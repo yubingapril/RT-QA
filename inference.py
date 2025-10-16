@@ -83,7 +83,6 @@ os.chdir(rt_folder)
 # Parallel(n_jobs=n_jobs)(delayed(cal_slice)(model_file,slice_script,interface_dir,slice_dir,tmp_folder) for model_file in model_list_all)
 def call_slice_in_env(model_file, slice_script, interface_dir, slice_dir, tmp_folder,slice_py):
     bash_cmd = f"""
-    source /backup/data6/hanbingqing/anaconda3/etc/profile.d/conda.sh
     conda activate rt
     python {slice_py} {model_file} {slice_script} {interface_dir} {slice_dir} {tmp_folder}
     """
